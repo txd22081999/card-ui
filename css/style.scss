@@ -1,90 +1,130 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-$orange: #F2A20C;
-$white-color: #E9EAEC;
-$dark-color: #272D40;
-$dark-color-lighten: #F2F5FF;
+$orange: #f2a20c;
+$white-color: #e9eaec;
+$dark-color: #272d40;
+$dark-color-lighten: #f2f5ff;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins';
+  font-family: "Poppins";
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
-    width: 100vw;
-    height: 100vh;
-    background-color: $dark-color-lighten;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $dark-color-lighten;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 
-    .content {
-        background-color: $dark-color;
-        max-width: 25%;
-        height: 60%;
-        border-radius: 15px;
-        box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
-        padding: 15px;
-        display: grid;
-        place-items: center;
-        
-        .wrapper {
-            // display: table-cell;
-            // vertical-align: middle;
-            // margin: 0 auto;
+  .content {
+    background-color: $dark-color;
+    max-width: 25%;
+    height: 60%;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
 
-        .img-container {
-            width: 80%;
-            height: 50%;
-            text-align: center;
-            margin: 0 auto;
-            // display: table-cell;
-            // vertical-align: middle;
+    .wrapper {
+      // display: table-cell;
+      // vertical-align: middle;
+      // margin: 0 auto;
+      transition: 0.2s ease-in;
+      //   overflow-y: hidden;
 
-            img {
-                width: 100%;
-                height: auto;
-            }
+      &:hover {
+        transform: translateY(-20%);
+
+        img {
+          transform: rotate(-20deg) translate(0%, -15%);
         }
 
         .name {
-            margin-top: 0.4rem;
-            text-align: center;
-            font-weight: 600;
-            font-size: 1.8rem;
-            letter-spacing: 2px;
-            color: $orange;
-            text-transform: capitalize;
+          transform: translateX(-10%);
         }
-
         .price {
-            color: white;
-            text-align: center;
-            font-weight: 600;
-            font-size: 1.4rem;
+          transform: translateX(-38%);
         }
 
+        button,
         .description {
-            margin-top: 1.5rem;
-            color: white;
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
 
-        button {
-            padding: 1rem 1.5rem;
-            font-weight: 500;
-            background-color: $orange;
-            border-radius: 10px;
-            color: white;
-            border: 0;
-            text-transform: capitalize;
-            margin-top: 0.3rem;
+      .img-container {
+        width: 80%;
+        height: 50%;
+        text-align: center;
+        margin: 0 auto;
+
+        img {
+          filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
+          transition: 0.2s ease-in;
         }
+      }
+
+      .name {
+        margin-top: 0.4rem;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+        color: $orange;
+        text-transform: capitalize;
+        transition: 0.2s ease-in;
+      }
+
+      .price {
+        color: white;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.4rem;
+        transition: 0.2s ease-in;
+      }
+
+      .description,
+      button {
+        opacity: 0;
+        // transform: translateY(2%);
+        transition: 0.2s ease-in;
+        transition-delay: 0.3;
+      }
+
+      .description {
+        margin-top: 1.5rem;
+        color: white;
+        font-size: 0.9rem;
+      }
+
+      button {
+        padding: 1rem 1.5rem;
+        font-weight: 600;
+        font-size: 1.1rem;
+        background-color: $orange;
+        border-radius: 10px;
+        color: white;
+        border: 0;
+        text-transform: capitalize;
+        margin-top: 1rem;
+        cursor: pointer;
+      }
     }
-    }
+  }
 }
-

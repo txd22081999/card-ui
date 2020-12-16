@@ -7,13 +7,18 @@
 }
 
 body {
-  font-family: 'Poppins';
+  font-family: "Poppins";
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
   width: 100vw;
   height: 100vh;
-  background-color: #F2F5FF;
+  background-color: #f2f5ff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,10 +28,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 .container .content {
-  background-color: #272D40;
+  background-color: #272d40;
   max-width: 25%;
   height: 60%;
   border-radius: 15px;
@@ -36,6 +42,39 @@ body {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  cursor: pointer;
+}
+
+.container .content .wrapper {
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.container .content .wrapper:hover {
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
+}
+
+.container .content .wrapper:hover img {
+  -webkit-transform: rotate(-20deg) translate(0%, -15%);
+          transform: rotate(-20deg) translate(0%, -15%);
+}
+
+.container .content .wrapper:hover .name {
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+}
+
+.container .content .wrapper:hover .price {
+  -webkit-transform: translateX(-38%);
+          transform: translateX(-38%);
+}
+
+.container .content .wrapper:hover button,
+.container .content .wrapper:hover .description {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .container .content .wrapper .img-container {
@@ -46,8 +85,10 @@ body {
 }
 
 .container .content .wrapper .img-container img {
-  width: 100%;
-  height: auto;
+  -webkit-filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
+          filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 
 .container .content .wrapper .name {
@@ -56,8 +97,10 @@ body {
   font-weight: 600;
   font-size: 1.8rem;
   letter-spacing: 2px;
-  color: #F2A20C;
+  color: #f2a20c;
   text-transform: capitalize;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 
 .container .content .wrapper .price {
@@ -65,21 +108,34 @@ body {
   text-align: center;
   font-weight: 600;
   font-size: 1.4rem;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.container .content .wrapper .description, .container .content .wrapper button {
+  opacity: 0;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  -webkit-transition-delay: 0.3;
+          transition-delay: 0.3;
 }
 
 .container .content .wrapper .description {
   margin-top: 1.5rem;
   color: white;
+  font-size: 0.9rem;
 }
 
 .container .content .wrapper button {
   padding: 1rem 1.5rem;
-  font-weight: 500;
-  background-color: #F2A20C;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background-color: #f2a20c;
   border-radius: 10px;
   color: white;
   border: 0;
   text-transform: capitalize;
-  margin-top: 0.3rem;
+  margin-top: 1rem;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
