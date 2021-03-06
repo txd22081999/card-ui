@@ -22,11 +22,11 @@ img {
 
 .container {
   width: 100vw;
-  height: 100vh;
   background-color: $dark-color-lighten;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
   overflow: hidden;
 
   .content {
@@ -41,11 +41,7 @@ img {
     cursor: pointer;
 
     .wrapper {
-      // display: table-cell;
-      // vertical-align: middle;
-      // margin: 0 auto;
       transition: 0.2s ease-in;
-      //   overflow-y: hidden;
 
       &:hover {
         transform: translateY(-20%);
@@ -55,7 +51,7 @@ img {
         }
 
         .name {
-          transform: translateX(-10%);
+          transform: translateX(-8%);
         }
         .price {
           transform: translateX(-38%);

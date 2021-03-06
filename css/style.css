@@ -17,7 +17,6 @@ img {
 
 .container {
   width: 100vw;
-  height: 100vh;
   background-color: #f2f5ff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,6 +27,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -61,8 +61,8 @@ img {
 }
 
 .container .content .wrapper:hover .name {
-  -webkit-transform: translateX(-10%);
-          transform: translateX(-10%);
+  -webkit-transform: translateX(-8%);
+          transform: translateX(-8%);
 }
 
 .container .content .wrapper:hover .price {
@@ -112,7 +112,8 @@ img {
   transition: 0.2s ease-in;
 }
 
-.container .content .wrapper .description, .container .content .wrapper button {
+.container .content .wrapper .description,
+.container .content .wrapper button {
   opacity: 0;
   -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
